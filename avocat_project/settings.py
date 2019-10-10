@@ -25,7 +25,7 @@ SECRET_KEY = 'g_5p43#u&84=wpqp&^%g2tj1j2)4jkej-xfr45wyt2b$q9tl6i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -78,8 +79,8 @@ WSGI_APPLICATION = 'avocat_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'avocat7',
-        'USER': 'avocat',
+        'NAME': 'avocatinvalide',
+        'USER': 'avocats',
         'PASSWORD': 'invalides18',
         'HOST': 'localhost',
         'PORT': '5433',
@@ -140,3 +141,6 @@ STATIC_URL = '/static/'
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media_cdn')
 MEDIA_URL = '/media/'
 
+import dj_database_url 
+prod_db  =  dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(prod_db)
