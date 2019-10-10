@@ -1,0 +1,1 @@
+web: gunicorn avocat_project.wsgi --log-file -
