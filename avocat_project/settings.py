@@ -148,11 +148,11 @@ import dj_database_url
 prod_db  =  dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
 
-SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
+# SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
 
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'david.crenin@gmail.com'
-ACCOUNT_EMAIL_SUBJECT_PREFIX = 'Contact email received from website'
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.sendgrid.net'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# DEFAULT_FROM_EMAIL = 'david.crenin@gmail.com'
+# ACCOUNT_EMAIL_SUBJECT_PREFIX = 'Contact email received from website'
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
