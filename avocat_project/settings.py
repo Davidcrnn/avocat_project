@@ -78,10 +78,10 @@ WSGI_APPLICATION = 'avocat_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'avocatinvalide',
-        'USER': 'avocats',
-        'PASSWORD': 'invalides18',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'avocatsitedb',
+        'USER': 'julien',
+        'PASSWORD': 'universite107',
         'HOST': 'localhost',
         'PORT': '5433',
     }
