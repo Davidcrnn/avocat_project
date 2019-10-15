@@ -1,10 +1,10 @@
 from django.urls import path
 from django.conf import settings
-from .views import HomePageView, emailView, successView
+from .views import HomePageView, ActualiteListView
 
 
 urlpatterns = [
     path('', HomePageView.as_view(), name='home'),
-    path('email/', emailView, name='email'),
-    path('success/', successView, name='success'),
+    path('actualites', ActualiteListView.as_view(), name= 'actualites')
+    
 ]
