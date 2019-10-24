@@ -1,0 +1,63 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content%}
+
+<div class="equipe-container">
+        <div class="container container-equipe">
+          <div class="navigation">
+            <h6><a href="{% url 'home' %}">Accueil</a> / L'Equipe </h6>
+          </div>
+          <div class="header-equipe text-center" data-aos="fade-left"
+          data-aos-offset="200"
+          data-aos-delay="5000"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-once="true">
+            <h1 data-aos="fade-left"
+          data-aos-offset="200"
+          data-aos-delay="5000"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-once="true">Notre Equipe</h1>
+            <img src="{% static 'vitrine/images/team.svg' %}" alt="">
+            <p data-aos="fade-right"
+          data-aos-offset="200"
+          data-aos-delay="5000"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-once="true">Notre équipe se compose d’avocats choisis pour leurs qualités académiques et
+      leur aptitude à écouter, conseiller et défendre dans un environnement exigeant.
+      
+      Diplômés d’universités françaises et étrangères et de grandes écoles, nos avocats
+      travaillent indistinctement en français et en anglais.
+      
+      Nous accordons une place essentielle à la formation continue. Nos avocats
+      s’astreignent chaque année à des sessions de perfectionnement et de remise à niveau,
+      afin de garantir à nos clients une sécurité juridique de premier plan.</p>
+          </div>
+          {% for personne in object_list %}
+          <div class="row">
+            
+            <a href="{% url 'equipe-detail' personne.id %}">
+            <div class="col-xs-12 col-sm-6 col-md-4 contain ">
+            <div class="photo-container image " style= "background-image: url('{{ personne.photo.url}}')">
+              </div>
+                <div class="card-text middle">
+                  <div class="text-equipe">
+                  <h3>{{personne.nom}}  </h3>
+                  <h6>{{personne.fonction}}  </h6>
+      
+                  </div>
+                </div>
+              </div></a>
+        {% endfor %}
+        
+          </div>
+        </div>
+      </div>
+      
+      <script>
+          AOS.init();
+        </script>
+      {% endblock %}
+      

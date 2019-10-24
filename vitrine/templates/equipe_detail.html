@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static%}
+
+{% block content%}
+<div class="equipe-container">
+        <div class="container container-equipe">
+          <div class="navigation cool-link">
+            
+            <a href="{% url 'home' %}">Accueil</a> / <a href="{% url 'equipe'%}">Equipe</a>
+          </div>
+          <div class="header-equipe text-center">
+            <img src="{% static 'vitrine/images/team.svg'%}" alt="">
+            <h2>{{ object.nom }}</h2>
+            <h4>{{ object.fonction }}</h4>
+            </div>
+            <div class="row">
+              <div class="col-xs-12 col-md-4">
+                <div class="photo-container" style= "background-image: url('{{ object.photo.url }}')">
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-7">
+                <p>{{ object.bio }}</p>
+              </div>
+            </div>
+            <div class="row">
+      
+              <div class="col-xs-12 col-sm-6 col-md-4 formation">
+                <h2>Formation</h2>
+                
+                {% if object.formation is not None %}
+                <p>{{ object.formation}}</p>
+                {% else %}
+                  <p>Ces informations ne sont pas précisées.</p>
+                {% endif %}
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-4 engagement">
+                <h2>Engagements</h2>
+                {% if object.engagement is not None %}
+                <p>{{ object.engagement}}</p>
+                {% else %}
+                  <p>Ces informations ne sont pas précisées.</p>
+                {% endif %}
+      
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-4 engagement">
+                <h2>Contact</h2>
+                <div class="inline">
+                        {% if object.email is not None %}
+                       <img src="{% static 'vitrine/images/email.svg' %}" alt=""> <p>{{ object.email }}</p>
+                        {% else %}
+                          <p>Ces informations ne sont pas précisées.</p>
+                        {% endif %}    
+      
+      
+                </div>
+                <div class="inline">
+                  {% if object.linkedin is not None %}
+                  <img src="{% static 'vitrine/images/linkedin.svg' %}" alt=""><p>{{ object.linkedin}}</p>
+                  {% else %}
+                    <p>Ces informations ne sont pas précisées.</p>
+                  {% endif %}
+      
+                </div>
+              </div>
+            </div>
+      
+        </div>
+      </div>
+    {% endblock %}

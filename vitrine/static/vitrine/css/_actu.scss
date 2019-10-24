@@ -1,0 +1,96 @@
+.actu-container img {
+    height: 600px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  .actu-index-container {
+    padding: 50px;
+    background: url('../images/background.svg');
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    h1 {
+      color: $main-color;
+    } img {
+      width: 50px;
+    }
+  }
+  
+  
+  
+  
+  // test
+  
+  .date {
+    font-size: 45px;
+  }
+  
+  .date-border {
+    border-left: 2px solid $main-color;
+  }
+  
+  .article-border {
+    margin-bottom: 60px;
+  } img{
+    width: 30px;
+    height: 30px;
+  } h2 {
+    margin-top: 0;
+  } p{
+    letter-spacing: 1px;
+    line-height: 25px;
+  }
+  
+  .year {
+    font-size: 20px;
+    color: $main-color;
+  }
+  
+  //test
+  .textes-container {
+    background-image: url('../images/quote.svg');
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: calc(130px - 0);;
+    right: 0;
+  }
+  
+  .container-margin {
+    margin: 70px auto;
+    padding: 50px 15px;
+    background-color: #002fa7;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000' stroke-width='97.1' stroke-opacity='0.13' %3E%3Ccircle fill='%23002fa7' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%230031a1' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%2300329a' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23003294' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%2300328c' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23003185' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%2300307d' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23002f75' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23002e6d' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23002c65' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23002b5c' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23002954' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%2300274c' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%23002543' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%2300223b' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%23012033' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%23091e2c' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%230f1b24' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+    border-radius: 15px;
+    h1 {
+      color: white;
+      text-align: center;
+    } label {
+      color: white;
+      margin-top: 20px;
+    }
+  }
+  
+  .link-form {
+    color: white;
+    cursor: pointer;
+  }
+  
+  .link-form:hover {
+    color: white;
+    opacity: 0.3;
+  }
+  
+  .btn-margin {
+    margin-bottom: 20px;
+  }
+  
+  #equipe_photo {
+    color: white;
+  }

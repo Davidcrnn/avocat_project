@@ -1,7 +1,135 @@
 {% extends 'base.html'%}
+{% load static %}
 {% block content %}
-<div class="container">
-    <h1>Hello</h1>
+<div class="home-container">
+        <div class="banner-container">
+       <ul class="rslides" id="slider2">
+        <li class="img-slider1"></li>
+        <li class="img-slider2"></li>
+        <li class="img-slider3"></li>
+  
+      </ul>
+      </div>
+    <div class="presentation-cabinet-background">
+    <div class="container">
+  
+  
+  
+      <div class="cabinet-description" data-aos="zoom-in"
+      data-aos-offset="200"
+      data-aos-delay="5000"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-once="true">
+        <div class="row">
+        <div class="col-xs-12 col-md-6 logo-cabinet">
+           <h1><img src="{% static 'vitrine/images/logo.svg' %}" alt=""></h1> <!-- <hr class="style-one"></hr> -->
+  
+        </div>
+  
+  
+            <div class="col-xs-12 col-md-6 text-description">
+            <p>
+          On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de distractions, et empêche de se concentrer sur la mise en page elle-même. L'avantage du Lorem Ipsum sur un texte générique comme 'Du texte. Du texte. Du texte.' est qu'il possède une distribution de lettres plus ou moins normale, et en tout cas comparable avec celle du français standard. De nombreuses suites logicielles de mise en page ou éditeurs de sites Web ont fait du Lorem Ipsum leur faux texte par défaut, et une recherche pour 'Lorem Ipsum' vous conduira vers de nombreux sites qui n'en sont encore qu'à leur phase de construction. Plusieurs versions sont apparues avec le temps, parfois par accident, souvent intentionnellement (histoire d'y rajouter de petits clins d'oeil, voire des phrases embarassantes).
+        </p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+      <div class="domaine-container">
+        <div class="container">
+  
+  
+        <h1 class="text-center">Domaines d'expertise</h1>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-3 card"data-aos="zoom-in"
+      data-aos-offset="200"
+      data-aos-delay="5000"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-once="true" >
+            <h2 >Droit Social</h2>
+          </div><div class="col-xs-12 col-sm-6 col-md-3 card"data-aos="zoom-in
+      data-aos-offset="200"
+      data-aos-delay="5000"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-once="true">
+            <h2>Contentieux</h2>
+          </div><div class="col-xs-12 col-sm-6 col-md-3 card"data-aos="zoom-in"
+      data-aos-offset="200"
+      data-aos-delay="5000"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-once="true">
+            <h2>Droit d'information</h2>
+          </div><div class="col-xs-12 col-sm-6 col-md-3 card"data-aos="zoom-in
+      data-aos-offset="200"
+      data-aos-delay="5000"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-once="true">
+            <h2>Droit de l'environnement</h2>
+          </div>
+        </div>
+        </div>
+      </div>
 
-</div>
+      {% if actualites is not None %}
+    <div class="actualite-container-background">
+  
+      <div class="container news-container">
+        <div class="text-center">
+        <h1>Nos Actualités</h1>
+        <img src="{% static 'vitrine/images/quote.svg' %}" alt="">
+        </div>
+  
+      
+        <div class="row">
+                {% for actu in actualites %}
+          <div class="col-xs-12 col-md-4 article" data-aos="zoom-in"
+      data-aos-offset="200"
+      data-aos-delay="5000"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-once="true">
+            <div class="article-position">
+              <img src="{% static 'vitrine/images/edit.svg'%}" alt="">
+            <h4> {{ actu.titre}}</h4>
+            <h6>{{ actu.date_publication.day}}/{{ actu.date_publication.month}}/{{ actu.date_publication.year}} - {{actu.auteur}}</h6>
+            <p>{{ actu.contenu|linebreaksbr|truncatewords:30  }}</p>
+            <a href="{% url 'actualite-detail' actu.id%}">Lire la suite</a>
+            </div>
+          </div>
+  
+        
+          {% endfor%}
+        </div>
+      <div class="text-center">
+        <a href="{% url 'actualites' %}" class="btn-all"> Voir toutes les publications</a>
+        </div>
+  </div>
+  </div>
+  {% endif%}
+  </div>
+  </div>
+  
+  
+  <script>
+  $(function () {
+     $("#slider2").responsiveSlides({
+          auto: true,
+          pager: false,
+          nav: false,
+          speed: 2000,
+          timeout: 5000,
+          namespace: "transparent-btns"
+        });
+      });
+  </script>
+  <script>
+      AOS.init();
+    </script>
+  
 {% endblock content%}

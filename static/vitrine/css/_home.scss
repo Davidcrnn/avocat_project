@@ -1,0 +1,208 @@
+// test
+
+.modal-content {
+    border: none;
+    box-shadow: none;
+    h4 {
+      color: $main-color;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .article-position {
+      margin-bottom: 50px;
+    }
+  
+    .cabinet-description {
+      padding: 10px 0;
+    }
+  
+  }
+  
+  @media screen and (max-width: 450px) {
+    .rslides {
+      height: 400px;
+    }
+  
+    h1.text-center {
+      font-size: 25px;
+    }
+  
+    div.text-center {
+      padding: 10px 0 40px 0;
+    }
+    .card h2 {
+      font-size: 20px;
+    }
+    .card {
+      height: 150px;
+    }
+  
+    .news-container img {
+      height: 30px;
+  
+    }
+    .news-container h1 {
+      font-size: 25px;
+    }
+  
+  }
+  
+  
+  
+  
+  
+  .home-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  
+  }
+  
+  .text-description {
+  
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+  
+  }
+  .cabinet-description{
+  
+    height: auto;
+      padding: 40px 0;
+    h1 {
+      text-align: center;
+      color: $main-color;
+    } img {
+      width: 250px;
+      height: 95px;
+    }
+  }
+  .logo-cabinet {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    // padding: 0;
+  }
+  hr.style-one {
+      border: 0;
+      height: 1px;
+      background: #333;
+      background-image: linear-gradient(to right, #ccc, #333, #ccc);
+  }
+  
+  .icon-position {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    padding: 20px;
+    border: 2px solid $main-color;
+  }
+  }
+  
+  .domaine-container {
+    color: white;
+    height: auto;
+    margin: 0;
+    padding: 30px;
+    background-image: image-url('../images/bannerhero.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  
+  }
+  .presentation-cabinet-background {
+    background-image: image-url('cabinet-background.svg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+  .text-center {
+    text-align: center;
+    padding: 40px 0;
+  }
+  
+  .card {
+   border: 2px solid #0000006b;
+      height: 200px;
+      display: flex;
+      color: #f5f5f5b8;
+      justify-content: center;
+      align-items: center;
+      opacity: 3.3;
+     background: #ffffff33;
+  
+    h2 {
+      text-align: center;
+      color: white;
+    }
+  }
+  
+  .news-container {
+    padding: 30px;
+  
+    h1 {
+      color: $main-color;
+  
+    } img {
+      height: 50px;
+      width: 50px;
+  
+    }
+  }
+  
+  .actualite-container-background {
+     background: image-url('background.svg');
+    background-size: cover;
+    background-position: center;
+    height: auto;
+  }
+  
+  .article {
+    height: auto;
+     display: flex;
+  
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+  }
+  
+  .article-position {
+    h6 {
+      font-style: italic;
+      color: rgba(128,128,128,0.54);
+    } p {
+      margin-bottom: 20px;
+    }
+    a {
+      color: $main-color;
+          border: 2px solid $main-color;
+      padding: 7px 30px;
+    } a:hover {
+      background-color: $main-color;
+      color: white;
+      text-decoration: none;
+    }
+  }
+  
+  a.btn-all  {
+    color: white;
+          background-color: $main-color;
+      padding: 7px 30px;
+   &:hover {
+    background-color: transparent;
+      color: $main-color;
+      text-decoration: none;
+      border: 2px solid $main-color;
+  }
+  }
+  

@@ -1,0 +1,45 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block content%}
+<div class="actu-container">
+        <img src="{% static 'vitrine/images/banner3.jpg' %}" alt="">
+      </div>
+      <div class="actu-index-container">
+      <div class="container">
+        <div class="navigation">
+          <!-- <%= link_to "Editer la publication", edit_actualite_path  %> / <%= link_to "Supprimer la publication", actualite_path(@actualite), :method => :delete  %> -->
+        </div>
+      
+        <div class="container">
+          <div data-aos="fade-left"
+          data-aos-offset="400"
+          data-aos-delay="5000"
+          data-aos-duration="3000"
+          data-aos-easing="ease-in-out"
+          data-aos-once="true" class="text-center">
+      
+        <h1>Nos dernières actualités</h1>
+        <img src="{% static 'vitrine/images/quote.svg' %}" alt="">
+        </div>
+      
+        <div class="row">
+          <div class="col-xs-12 col-md-5 date-border">
+            <div class="date">{{ object.date_publication.day }}</div>
+            <span class="month">{{ object.date_publication.month}}</span> <br>
+            <span class="year">{{ object.date_publication.year }}</span>
+          </div>
+          <div class="col-xs-12 col-md-6 article-border">
+                <h2>{{ object.titre }}</h2>
+                <h6>Ecrit par : {{ object.auteur }}</h6>
+                <p>{{ object.contenu|linebreaksbr  }}</p>
+          </div>
+        </div>
+      
+        </div>
+      </div>
+      </div>
+      <script>
+          AOS.init();
+        </script>
+{% endblock %}

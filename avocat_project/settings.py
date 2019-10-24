@@ -11,14 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
-import environ
-
-env = environ.Env(
-# set casting, default value
-DEBUG=(bool, False)
-)
-# reading .env file
-environ.Env.read_env()
+from decouple import config
 
 
 
@@ -32,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -92,8 +85,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'avocatsitedb',
-        'USER': env('USER_DB'),
-        'PASSWORD': env('PASSWORD_DB'),
+        'USER': config('USER_DB'),
+        'PASSWORD': config('PASSWORD_DB'),
         'HOST': 'localhost',
         'PORT': '5433',
     }
@@ -142,7 +135,7 @@ STATICFILES_FINDERS = [
 ]
 
 STATICFILES_DIRS = [
-  os.path.join(BASE_DIR, 'pages/static'),
+  os.path.join(BASE_DIR, 'vitrine/static'),
 ]
 SASS_PROCESSOR_ROOT = os.path.join(BASE_DIR,'static')
 
@@ -150,18 +143,18 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media_cdn')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 import dj_database_url 
 prod_db  =  dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
 
-SENDGRID_API_KEY = env('SENDGRID_API_KEY')
+
 
 EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = env('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'david.crenin@gmail.com'

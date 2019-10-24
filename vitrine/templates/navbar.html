@@ -1,17 +1,18 @@
+{% load static %}
 <div class="nav-bar-container">
         <div class="logo-container">
-         <a href="/" >Logo</a>
+         <a href="/" ><img src="{% static 'vitrine/images/logo.svg' %}" id="logo" alt=""></a>
      
        </div>
      
      
          <div class="link-primary">
              <ul class="nav navbar-nav hidden-xs hidden-sm">
-               <li>Accueil</li>
-                 <li>Equipe</li>
-                     <li>Expertise</li>
-                     <li>News</li>
-                     <li>Contact</li>
+               <li> <a href="{% url 'home' %}">Accueil</a></li>
+                 <li><a href="{% url 'equipe' %}">Equipe</a></li>
+                     <li><a href="{% url 'home' %}">Expertise</a></li>
+                     <li><a href="{% url 'actualites' %}">News</a></li>
+                     <li><a href="{% url 'actualites' %}">Contact</a></li>
      
              </ul>
      
@@ -39,3 +40,4 @@
        </div>
      </div>
      </div>
+
