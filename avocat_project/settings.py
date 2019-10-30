@@ -151,12 +151,18 @@ prod_db  =  dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
 
 
-
 EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = 587
+EMAIL_HOST_USER = 'parsifal_app'
+EMAIL_HOST_PASSWORD = 'mys3cr3tp4ssw0rd'
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'david.crenin@gmail.com'
-ACCOUNT_EMAIL_SUBJECT_PREFIX = 'Contact email received from website'
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+
+SENDGRID_API_KEY = config('SENGDRID_API_KEY')
+EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
+
+# Toggle sandbox mode (when running in DEBUG mode)
+SENDGRID_SANDBOX_MODE_IN_DEBUG=True
+
+# echo to stdout or any other file-like object that is passed to the backend via the stream kwarg.
+SENDGRID_ECHO_TO_STDOUT=True
