@@ -260,7 +260,7 @@ hr.style-one {
   height: auto;
   margin: 0;
   padding: 30px;
-  background-image: url("../images/banner1.jpg");
+  background-image: url("../images/banner-competence.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover; }
@@ -588,7 +588,7 @@ p {
   width: 100%; }
 
 .img-slider1 {
-  background-image: url("../images/banner1.jpg");
+  background-image: url("../images/bannerhero.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed; }
