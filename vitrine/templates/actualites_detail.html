@@ -7,9 +7,10 @@
       </div>
       <div class="actu-index-container">
       <div class="container">
-        <div class="navigation">
-          <!-- <%= link_to "Editer la publication", edit_actualite_path  %> / <%= link_to "Supprimer la publication", actualite_path(@actualite), :method => :delete  %> -->
-        </div>
+          <div class="navigation">
+              <!-- <%= link_to "Accueil", '/' %>  <% if user_signed_in? %> / <%= link_to 'Ajouter une publication', new_actualite_path  %> <% end %> -->
+                  <a href="{% url 'home' %}">Accueil</a> / <a href="{% url 'actualites' %}">Actutalités</a> / {{ object.titre}} 
+              </div>
       
         <div class="container">
           <div data-aos="fade-left"
