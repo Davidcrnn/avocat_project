@@ -1,6 +1,6 @@
 .equipe-container {
     background-color: #fcfeff;
-  background-image: url("../images/background-equipe.svg");
+  background-image: url('../images/cabinet-background.svg');
   background-attachment: fixed;
   background-size: cover;
     background-position: center;
@@ -12,6 +12,8 @@
     height: 400px;
     background-size: cover;
     background-position:center;
+    margin-bottom: 30px;
+    border-radius: 2%;
   }
   
   .container-equipe {
@@ -115,7 +117,7 @@
     opacity: 1;
     display: block;
     width: 100%;
-    height: 400px;
+    height: 300px;
     transition: .5s ease;
     backface-visibility: hidden;
   }
