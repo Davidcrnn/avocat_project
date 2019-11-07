@@ -145,12 +145,23 @@
      background: #e8e9ea;
      margin-bottom: 30px;
   
-    h2 {
+    h3 {
       text-align: center;
       color: $main-color;
     }
   }
   
+  .header-domain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      background: #e8e9ea;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    }
+  }
   .news-container {
     padding: 30px;
   
