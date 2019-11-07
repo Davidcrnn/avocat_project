@@ -6,7 +6,6 @@ $(document).ready(function(){
 });
 $('.overlay').on('click', function(){
   $(".overlay").fadeToggle(200);
-  $("#hamburger").css({background-color: "$main-color",})
   $(".hamburger").toggleClass('btn-open').toggleClass('btn-close');
   open = false;
 });
