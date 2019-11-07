@@ -4,17 +4,17 @@
   }
   
   .img-slider1 {
-    background-image: image-url('../images/bannerhero.jpg');
+    background-image: url('../images/bannerhero.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
   }.img-slider2 {
-    background-image: image-url('banner2.jpg');
+    background-image: url('../images/banner2.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
   }.img-slider3 {
-    background-image: image-url('banner3.jpg');
+    background-image: url('../images/banner3.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

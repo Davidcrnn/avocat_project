@@ -5,11 +5,12 @@
                 <div class="">
                     <h3 class="footer-heading text-uppercase text-white">Navigation</h3>
                     <ul class="list-unstyled footer-link mt-4">
-                        <li><a href="">Accueil</a>      </li>
-                        <li><a href="">Expertise</a></li>
-                        <li><a href="">Equipe</a></li>
-                        <li><a href="">Actualités</a></li>
-                        <li><a href="">Admin</a></li>
+                            <li> <a href="{% url 'home' %}">Accueil</a></li>
+                            <li><a href="{% url 'equipe' %}">L'Equipe</a></li>
+                                <li><a href="{% url 'home' %}">Domaines d'expertise</a></li>
+                                <li><a href="{% url 'actualites' %}">Actualités</a></li>
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                        
                     </ul>
                 </div>
             </div>
@@ -18,7 +19,11 @@
                 <div class="">
                     <h3 class="footer-heading text-uppercase text-white">Informations</h3>
                     <ul class="list-unstyled footer-link mt-4">
+
                         <li><a href="">Policy</a></li>
+
+                        <li><a href="{% url 'admin:index' %}">Admin</a></li>
+
                     </ul>
                 </div>
             </div>
