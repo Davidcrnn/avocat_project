@@ -19,14 +19,14 @@
           data-aos-easing="ease-in-out"
           data-aos-once="true" class="text-center">
       
-        <h1>Nos dernières actualités</h1>
+        <h1>{{object.titre}}</h1>
         <img src="{% static 'vitrine/images/quote.svg' %}" alt="">
         </div>
       
         <div class="row">
           <div class="col-xs-12 col-md-5 date-border">
             <div class="date">{{ object.date_publication.day }}</div>
-            <span class="month">{{ object.date_publication.month}}</span> <br>
+            <span class="month">{{ object.date_publication|date:'M'}}</span> <br>
             <span class="year">{{ object.date_publication.year }}</span>
           </div>
           <div class="col-xs-12 col-md-6 article-border">

@@ -1,0 +1,34 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block content %}
+<div class="contact-body">
+  <div class="container">
+    <div class="contact-container">
+    <div class="row">
+        <div class="col-xs-12 col-md-4 contact-coordonnees">
+            <h2>Cabinet 107 Université</h2>
+            <p>107 rue de l'université</p>
+            <p>75007</p>
+        
+            <p>Tél: 01 54 54 54 54</p>
+            <p>Email: contact@107universite.com</p>
+          </div>
+          <div class="col-xs-12 col-md-8 form-container">
+              <form method="post" class='contact-form'>
+                <h2>Nous contacter</h2>
+                  {% csrf_token %}
+                  {{ form.as_p }}
+                  <div class="form-actions">
+                    <button type="submit" class="button type1 border-top-color">Envoyer</button>
+                  </div>
+              </form>
+          </div>
+    </div>
+    
+  </div>
+  </div>
+
+</div>
+
+{% endblock %}
