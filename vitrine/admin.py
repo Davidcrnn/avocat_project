@@ -9,3 +9,8 @@ class ActualiteAdmin(admin.ModelAdmin):
 @admin.register(Equipe)
 class EquipeAdmin(admin.ModelAdmin):
     list_display = ('nom', 'bio', 'formation', 'photo')
+
+
+admin.site.site_header = "Connexion Admin"
+admin.site.site_title = "107 universités"
+admin.site.index_title = "Admin"

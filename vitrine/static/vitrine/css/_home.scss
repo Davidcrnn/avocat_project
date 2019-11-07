@@ -19,6 +19,8 @@
     .cabinet-description {
       padding: 10px 0;
     }
+
+    
   
   }
   
@@ -110,14 +112,15 @@
   }
   
   .domaine-container {
-    color: white;
-    height: auto;
+    color: black;
+    min-height: 500px;
     margin: 0;
     padding: 30px;
-    background-image: url('../images/banner-competence.jpg');
+    background-image: url('../images/domaine.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    
   
   }
   .presentation-cabinet-background {
@@ -132,18 +135,19 @@
   }
   
   .card {
-   border: 2px solid #0000006b;
+   border-radius: 3px;
+   box-shadow: inset 0 0 10px #00000052;
       height: 200px;
       display: flex;
-      color: #f5f5f5b8;
+      color: black;
       justify-content: center;
       align-items: center;
-      opacity: 3.3;
-     background: #ffffff33;
+     background: #e8e9ea;
+     margin-bottom: 30px;
   
     h2 {
       text-align: center;
-      color: white;
+      color: $main-color;
     }
   }
   
@@ -161,7 +165,7 @@
   }
   
   .actualite-container-background {
-     background: url('../images/background.svg');
+     background: url('../images/cabinet-background.svg');
     background-size: cover;
     background-position: center;
     height: auto;
