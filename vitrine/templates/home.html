@@ -2,192 +2,177 @@
 {% load static %}
 {% block content %}
 <div class="home-container">
-        <div class="banner-container">
-       <ul class="rslides" id="slider2">
-        <li class="img-slider1"></li>
-        <li class="img-slider2"></li>
-        <li class="img-slider3"></li>
-  
-      </ul>
-      </div>
-    <div class="presentation-cabinet-background">
+  <div class="banner-container">
+    <ul class="rslides" id="slider2">
+      <li class="img-slider1"></li>
+      <li class="img-slider2"></li>
+      <li class="img-slider3"></li>
+
+    </ul>
+  </div>
+  <div class="presentation-cabinet-background">
     <div class="container">
-  
-  
-  
-      <div class="cabinet-description" data-aos="zoom-in"
-      data-aos-offset="200"
-      data-aos-delay="5000"
-      data-aos-duration="1000"
-      data-aos-easing="ease-in-out"
-      data-aos-once="true">
+
+
+
+      <div class="cabinet-description" data-aos="zoom-in" data-aos-offset="200" data-aos-delay="5000"
+        data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">
         <div class="row">
-        <div class="col-xs-12 logo-cabinet">
-           <h1><img src="{% static 'vitrine/images/logo.svg' %}" alt=""></h1> <!-- <hr class="style-one"></hr> -->
-  
-        </div>
+          <div class="col-xs-12 logo-cabinet">
+            <h1><img src="{% static 'vitrine/images/logo.svg' %}" alt=""></h1> <!-- <hr class="style-one"></hr> -->
+
+          </div>
         </div>
         <div class="row">
 
-        
-  
-            <div class="col-xs-12">
-            <p>
-                Le Cabinet 107UNIVERSITE    a été créé le 1 er janvier 2019 et est composé de 3 Associés intervenant
+
+
+          <div class="col-xs-12">
+            <div class="section-description-cabinet">
+              <p>
+                Le Cabinet 107UNIVERSITE a été créé le 1 er janvier 2019 et est composé de 3 Associés intervenant
                 essentiellement en matière de Droit d Travail, tant en conseil qu’en contentieux. <br>
 
                 Cette association fondée d’abord sur une expertise reconnue de 3 praticiens disposant de plus de 20
                 d’expérience traduit aussi l’expression de mettre en commun des valeurs communes. <br>
-              </p>   
-                <h3>UN TRAVAIL d’EQUIPE</h3> 
-                <p>Comme en matière sportive, l’esprit d’équipe est développé à chaque instant dans le cadre de notre
-                    exercice professionnel que ce soit entre les membres du Cabinet, qu’ils soient Associés ou
-                    Collaborateurs ou avec nos clients. <br>
-                    Le but recherché est le partage des compétences pour une plus grande efficacité.</p>
-                
-                <h3>QUALITÉS ET RÉACTIVITÉ</h3>
-                <p>Notre taille de structure est un atout essentiel pour nos clients qui peuvent compter sur une très
-                    grande rapidité d’intervention, d’élaboration de stratégie, de traitement et plus généralement
-                    bénéficier d’une information en temps réel sur le suivi de leurs dossiers. <br>
-                    Notre organisation est élaborée afin d’adapter notre fonctionnement aux besoins de nos clients
-                    prenant ainsi en considération leurs spécificités afin de nouer une relation privilégiée et adaptée.
-                    </p> 
-                <h3>LA DETERMINATION</h3>
-                <p>Les membres du Cabinet défendent naturellement les intérêts de leurs clients avec la volonté
-                    constante, en toutes circonstances, de leur permettre d’obtenir le meilleur résultat ou la meilleure
-                    solution possible, tant en conseil qu’en contentieux, quelle que soit la situation.</p> 
-        
+              </p>
+              <h3>UN TRAVAIL D’EQUIPE</h3> 
+              <p>Comme en matière sportive, l’esprit d’équipe est développé à chaque instant dans le cadre de notre
+                exercice professionnel que ce soit entre les membres du Cabinet, qu’ils soient Associés ou
+                Collaborateurs ou avec nos clients. <br>
+                Le but recherché est le partage des compétences pour une plus grande efficacité.</p>
+
+              <h3>QUALITÉS ET RÉACTIVITÉ</h3>
+              <p>Notre taille de structure est un atout essentiel pour nos clients qui peuvent compter sur une très
+                grande rapidité d’intervention, d’élaboration de stratégie, de traitement et plus généralement
+                bénéficier d’une information en temps réel sur le suivi de leurs dossiers. <br>
+                Notre organisation est élaborée afin d’adapter notre fonctionnement aux besoins de nos clients
+                prenant ainsi en considération leurs spécificités afin de nouer une relation privilégiée et adaptée.
+              </p>
+              <h3>LA DETERMINATION</h3>
+              <p>Les membres du Cabinet défendent naturellement les intérêts de leurs clients avec la volonté
+                constante, en toutes circonstances, de leur permettre d’obtenir le meilleur résultat ou la meilleure
+                solution possible, tant en conseil qu’en contentieux, quelle que soit la situation.</p>
+
+            </div>
+
           </div>
         </div>
-      </div>
       </div>
     </div>
-      <div class="domaine-container">
-        <div class="container">
-          <div class="header-domain">
-              <h1 class="">DOMAINES D'EXPERTISE</h1>
-          </div>
-  
-  
-        
-        <div class="row">
-          <div class="col-xs-12 col-sm-6 col-md-3 "data-aos="zoom-in"
-      data-aos-offset="200"
-      data-aos-delay="5000"
-      data-aos-duration="1000"
-      data-aos-easing="ease-in-out"
-      data-aos-once="true" >
-      <a href="{% url 'expertise'%}">
-      <div class="card">
-        <div class="card-1">
-          <h3 >Droit Social</h3>
-            
-        </div>
-        
-      </div>
-    </a>
-          </div><div class="col-xs-12 col-sm-6 col-md-3 "data-aos="zoom-in"
-          data-aos-offset="200"
-          data-aos-delay="5000"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-          data-aos-once="true" >
-          <a href="{% url 'expertise'%}">
-          <div class="card">
-            <div class="card-1">
-              <h3 >Contentieux</h3>
-    
-            </div>
-    
-          </div></a>
-              </div><div class="col-xs-12 col-sm-6 col-md-3 "data-aos="zoom-in"
-              data-aos-offset="200"
-              data-aos-delay="5000"
-              data-aos-duration="1000"
-              data-aos-easing="ease-in-out"
-              data-aos-once="true" >
-              <a href="{% url 'expertise'%}">
-              <div class="card">
-                <div class="card-1">
-                  <h3 >Droit du travail</h3>
-        
-                </div>
-        
-              </div></a>
-                  </div>
-                  <div class="col-xs-12 col-sm-6 col-md-3 "data-aos="zoom-in"
-              data-aos-offset="200"
-              data-aos-delay="5000"
-              data-aos-duration="1000"
-              data-aos-easing="ease-in-out"
-              data-aos-once="true" >
-              <a href="{% url 'expertise'%}">
-              <div class="card">
-                <div class="card-1">
-                  <h3 >Droit de l'environnement</h3>
-        
-                </div>
-        
-              </div></a>
-                  </div>
-        </div>
-        </div>
+  </div>
+  <div class="domaine-container">
+    <div class="container">
+      <div class="header-domain">
+        <h1 class="">DOMAINES D'EXPERTISE</h1>
       </div>
 
-      {% if actualites is not None %}
-    <div class="actualite-container-background">
-  
-      <div class="container news-container">
-        <div class="text-center">
+
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-3 " data-aos="zoom-in" data-aos-offset="200" data-aos-delay="5000"
+          data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">
+          <a href="{% url 'expertise'%}">
+            <div class="card">
+              <div class="card-1">
+                <h3>Droit Social</h3>
+
+              </div>
+
+            </div>
+          </a>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 " data-aos="zoom-in" data-aos-offset="200" data-aos-delay="5000"
+          data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">
+          <a href="{% url 'expertise'%}">
+            <div class="card">
+              <div class="card-1">
+                <h3>Contentieux</h3>
+
+              </div>
+
+            </div>
+          </a>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 " data-aos="zoom-in" data-aos-offset="200" data-aos-delay="5000"
+          data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">
+          <a href="{% url 'expertise'%}">
+            <div class="card">
+              <div class="card-1">
+                <h3>Droit du travail</h3>
+
+              </div>
+
+            </div>
+          </a>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3 " data-aos="zoom-in" data-aos-offset="200" data-aos-delay="5000"
+          data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">
+          <a href="{% url 'expertise'%}">
+            <div class="card">
+              <div class="card-1">
+                <h3>Droit de l'environnement</h3>
+
+              </div>
+
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% if actualites is not None %}
+  <div class="actualite-container-background">
+
+    <div class="container news-container">
+      <div class="text-center">
         <h1>Nos Actualités</h1>
         <img src="{% static 'vitrine/images/quote.svg' %}" alt="">
-        </div>
-  
-      
-        <div class="row">
-                {% for actu in actualites %}
-          <div class="col-xs-12 col-md-4 article" data-aos="zoom-in"
-      data-aos-offset="200"
-      data-aos-delay="5000"
-      data-aos-duration="1000"
-      data-aos-easing="ease-in-out"
-      data-aos-once="true">
-            <div class="article-position">
-              <img src="{% static 'vitrine/images/edit.svg'%}" alt="">
+      </div>
+
+
+      <div class="row">
+        {% for actu in actualites %}
+        <div class="col-xs-12 col-md-4 article" data-aos="zoom-in" data-aos-offset="200" data-aos-delay="5000"
+          data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">
+          <div class="article-position">
+            <img src="{% static 'vitrine/images/edit.svg'%}" alt="">
             <h4> {{ actu.titre}}</h4>
-            <h6>{{ actu.date_publication.day}}/{{ actu.date_publication.month}}/{{ actu.date_publication.year}} - {{actu.auteur}}</h6>
+            <h6>{{ actu.date_publication.day}}/{{ actu.date_publication.month}}/{{ actu.date_publication.year}} -
+              {{actu.auteur}}</h6>
             <p>{{ actu.contenu|linebreaksbr|truncatewords:30  }}</p>
             <a href="{% url 'actualite-detail' actu.id%}">Lire la suite</a>
-            </div>
           </div>
-  
-        
-          {% endfor%}
         </div>
+
+
+        {% endfor%}
+      </div>
       <div class="text-center">
         <a href="{% url 'actualites' %}" class="btn-all"> Voir toutes les publications</a>
-        </div>
-  </div>
+      </div>
+    </div>
   </div>
   {% endif%}
-  </div>
-  </div>
-  
-  
-  <script>
+</div>
+</div>
+
+
+<script>
   $(function () {
-     $("#slider2").responsiveSlides({
-          auto: true,
-          pager: false,
-          nav: false,
-          speed: 2000,
-          timeout: 5000,
-          namespace: "transparent-btns"
-        });
-      });
-  </script>
-  <script>
-      AOS.init();
-    </script>
-  
+    $("#slider2").responsiveSlides({
+      auto: true,
+      pager: false,
+      nav: false,
+      speed: 2000,
+      timeout: 5000,
+      namespace: "transparent-btns"
+    });
+  });
+</script>
+<script>
+  AOS.init();
+</script>
+
 {% endblock content%}

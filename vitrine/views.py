@@ -10,14 +10,15 @@ from datetime import datetime
 
 from .forms import ContactForm
 
+
 class HomePageView(TemplateView):
     template_name = 'home.html'
     model = Actualite
 
     def get(self, request):
-         actualites = Actualite.objects.all()
-         stu = {"actualites": actualites}
-         return render(request, 'home.html', stu)
+        actualites = Actualite.objects.all()
+        stu = {"actualites": actualites}
+        return render(request, 'home.html', stu)
 
 
 class ActualiteListView(ListView):
@@ -33,7 +34,7 @@ class ActualiteDetailView(DetailView):
 class EquipeListView(ListView):
     model = Equipe
     template_name = 'equipe_list.html'
-    
+
 
 class EquipeDetailView(DetailView):
     model = Equipe
@@ -41,7 +42,8 @@ class EquipeDetailView(DetailView):
 
 
 class ExpertiseView(TemplateView):
-    template_name= 'expertise.html'
+    template_name = 'expertise.html'
+
 
 def emailView(request):
     if request.method == 'GET':
@@ -52,14 +54,20 @@ def emailView(request):
             subject = form.cleaned_data['subject']
             from_email = form.cleaned_data['from_email']
             message = form.cleaned_data['message']
-            
+
             try:
-                send_mail(subject, message, from_email, ['david.crenin@gmail.com'])
-                messages.success(request, 'Your password was updated successfully!')
+                send_mail(subject, message, from_email,
+                          ['david.crenin@gmail.com'])
+                messages.success(request, 'Votre email a bien été envoyé')
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect('home')
     return render(request, "contact.html", {'form': form},)
 
+
 def successView(request):
     return HttpResponse('Success! Thank you for your message.')
+
+
+class mentionsLegales(TemplateView):
+    template_name = 'mentions-legales.html'
