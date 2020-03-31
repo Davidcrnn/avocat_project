@@ -279,6 +279,9 @@ a.btn-contact {
     width: 250px;
     height: 95px; }
 
+.section-description-cabinet h3 {
+  font-size: 20px; }
+
 .logo-cabinet {
   display: flex;
   justify-content: center;
@@ -572,7 +575,7 @@ p {
 
 .middle {
   transition: .5s ease;
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   top: 50%;
   left: 50%;

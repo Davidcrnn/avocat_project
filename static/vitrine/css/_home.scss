@@ -19,6 +19,8 @@
     .cabinet-description {
       padding: 10px 0;
     }
+
+    
   
   }
   
@@ -80,7 +82,11 @@
     } img {
       width: 250px;
       height: 95px;
-    }
+    } 
+  }
+
+  .section-description-cabinet h3 {
+    font-size: 20px;
   }
   .logo-cabinet {
     display:flex;
@@ -111,13 +117,14 @@
   
   .domaine-container {
     color: black;
-    height: auto;
+    min-height: 500px;
     margin: 0;
     padding: 30px;
-    background-image: url('../images/actu-bg.jpg');
+    background-image: url('../images/domaine.jpg');
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    
   
   }
   .presentation-cabinet-background {
@@ -132,21 +139,33 @@
   }
   
   .card {
-   border: 2px solid #0000006b;
+   border-radius: 3px;
+   box-shadow: inset 0 0 10px #00000052;
       height: 200px;
       display: flex;
       color: black;
       justify-content: center;
       align-items: center;
-      opacity: 3.3;
-     background: #ffffff33;
+     background: #e8e9ea;
+     margin-bottom: 30px;
   
-    h2 {
+    h3 {
       text-align: center;
-      color: black;
+      color: $main-color;
     }
   }
   
+  .header-domain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      background: #e8e9ea;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    }
+  }
   .news-container {
     padding: 30px;
   
@@ -161,7 +180,7 @@
   }
   
   .actualite-container-background {
-     background: url('../images/background.svg');
+     background: url('../images/cabinet-background.svg');
     background-size: cover;
     background-position: center;
     height: auto;
